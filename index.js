@@ -27,7 +27,7 @@ app.get("/createdb", (req, res) => {
   db.query(sql, (err, result) => {
     if (err) throw err;
     console.log("result");
-    res.send("Database Created");
+    res.json("Database Created");
   });
 });
 
@@ -39,7 +39,7 @@ app.get("/createposttable", (req, res) => {
   db.query(sql, (err, result) => {
     if (err) throw err;
     console.log("result");
-    res.send("Posts table crated");
+    res.json("Posts table crated");
   });
 });
 
@@ -50,7 +50,7 @@ app.get("/addpost/:id", (req, res) => {
   let query = db.query(sql, post, (err, result) => {
     if (err) throw err;
     console.log("result");
-    res.send("Post 1 added");
+    res.json("Post 1 added");
   });
 });
 
@@ -61,7 +61,7 @@ app.get("/addpost2", (req, res) => {
   let query = db.query(sql, post, (err, result) => {
     if (err) throw err;
     console.log("result");
-    res.send("Post 2 added");
+    res.json("Post 2 added");
   });
 });
 
@@ -71,7 +71,7 @@ app.get("/getposts", (req, res) => {
   let query = db.query(sql, (err, result) => {
     if (err) throw err;
     console.log(result);
-    res.send("posts fetched");
+    res.json("posts fetched");
   });
 });
 
@@ -81,7 +81,7 @@ app.get("/getpost/:id", (req, res) => {
   let query = db.query(sql, (err, result) => {
     if (err) throw err;
     console.log(result);
-    res.send("single post fetched");
+    res.json("single post fetched");
   });
 });
 
@@ -92,7 +92,7 @@ app.get("/updatepost/:id", (req, res) => {
   let query = db.query(sql, (err, result) => {
     if (err) throw err;
     console.log(result);
-    res.send("post updated");
+    res.json("post updated");
   });
 });
 
@@ -102,7 +102,7 @@ app.get("/deletepost/:id", (req, res) => {
   let query = db.query(sql, (err, result) => {
     if (err) throw err;
     console.log("result");
-    res.send("Post deleted");
+    res.json("Post deleted");
   });
 });
 
